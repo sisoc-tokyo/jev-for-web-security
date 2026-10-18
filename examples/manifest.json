@@ -1,0 +1,26 @@
+{
+  "normal": {
+    "provenance": "programmatically_generated_illustration",
+    "records": 80,
+    "ai_agent_execution": false,
+    "suitable_for_accuracy_claims": false
+  },
+  "automation": {
+    "provenance": "programmatically_generated_illustration",
+    "records": 80,
+    "ai_agent_execution": false,
+    "suitable_for_accuracy_claims": false
+  },
+  "scripted_scan": {
+    "provenance": "programmatically_generated_illustration",
+    "records": 80,
+    "ai_agent_execution": false,
+    "suitable_for_accuracy_claims": false
+  },
+  "adaptive_illustration": {
+    "provenance": "programmatically_generated_illustration",
+    "records": 80,
+    "ai_agent_execution": false,
+    "suitable_for_accuracy_claims": false
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="demo-token" content="__TOKEN__"><title>Jev for Web Security</title><link rel="stylesheet" href="/style.css"></head>
+<body><header><div class="eyebrow">WEB / API BEHAVIOR ANALYSIS &nbsp; / &nbsp; v0.1.0</div>
+<h1>Jev for Web Security</h1><p>Inspect the trial-and-error across requests. Not just individual requests.</p>
+<div id="mode" class="badge">Checking engine...</div></header>
+<main><section class="controls card"><h2>1. Choose observations</h2>
+<div class="grid"><label>Scenario<select id="scenario"><option value="normal">Ordinary browsing (synthetic)</option><option value="automation">Legitimate automation (synthetic)</option><option value="scan">Repetitive scanning (synthetic)</option><option value="adaptive" selected>Changing-strategy illustration (synthetic)</option></select></label>
+<label>Window size (requests)<input id="window" type="number" value="20" min="1" max="200"></label>
+<label>Stride (new requests)<input id="stride" type="number" value="5" min="1" max="200"></label>
+<label>Short horizon (seconds)<input id="short" type="number" value="300" min="1" max="86400"></label>
+<label>History (minutes)<input id="history" type="number" value="30" min="1" max="1440"></label></div>
+<div class="actions"><button id="run">Analyze sequence</button><button id="export" class="secondary" disabled>Export analysis JSON</button>
+<label class="upload">Use your JSONL file <input id="file" type="file" accept=".jsonl,.json,.txt"></label><span id="filelabel"></span></div>
+<label id="consentrow" class="consent" hidden><input id="consent" type="checkbox"> I have reviewed the observations and authorize sending minimized data to the TypeSafe API. Each window may incur API charges.</label>
+<p class="note">Bundled examples are generated illustrations, not captured AI attacks. No traffic is sent to a target. Changing the window starts a separate analysis; it does not establish an optimal size.</p>
+<div id="error" role="alert" hidden></div></section>
+<section class="summary"><div class="card"><span class="kicker">OBSERVATIONS</span><strong id="events">-</strong><small>across all entities</small></div>
+<div class="card"><span class="kicker">WINDOW DECISIONS</span><strong id="windows">-</strong><small>causal, overlapping input</small></div>
+<div class="card"><span class="kicker">REVIEW FLAGS</span><strong id="flags">-</strong><small>not confirmed attacks</small></div>
+<div class="card"><span class="kicker">CLASSIFIER</span><strong class="engine" id="engine">-</strong><small id="model">not a benchmark result</small></div></section>
+<section class="card"><div class="sectiontitle"><h2>2. Inspect a decision window</h2><span id="selection">Run the analysis first</span></div>
+<p class="note">Select a block to inspect the exact input and evidence. Each block is a decision, not an independent test sample.</p>
+<div id="timeline" class="timeline"></div>
+<div class="detailgrid"><div><span class="kicker">OBSERVED BEHAVIOR</span><h3 id="behavior">-</h3><p id="verdict"></p><p id="context" class="note"></p><div id="evidence"></div></div>
+<div class="panel"><span class="kicker">SCORE / INTERPRETATION</span><strong id="score">-</strong><p id="scorekind"></p><p id="latency" class="note"></p></div></div>
+<div class="tablewrap"><table><thead><tr><th>Event</th><th>UTC time</th><th>Method</th><th>Normalized route</th><th>Status</th><th>Bytes</th></tr></thead><tbody id="rows"></tbody></table></div>
+<details><summary>Exact minimized model input and returned decision</summary><pre id="raw"></pre></details></section>
+<footer>Experimental analyst-assistance tool. Not inline protection. Temporal association does not prove response causality, malicious intent, AI use or successful data theft.</footer>
+</main><script src="/app.js" defer></script></body></html>

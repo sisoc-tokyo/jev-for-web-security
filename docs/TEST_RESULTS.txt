@@ -1,0 +1,41 @@
+Verification date: 2026-10-18
+Python: 3.13.5
+
+test_invalid_probability_rejected (test_core.ApiContractTests.test_invalid_probability_rejected) ... ok
+test_key_is_required (test_core.ApiContractTests.test_key_is_required) ... ok
+test_payload_uses_official_fields (test_core.ApiContractTests.test_payload_uses_official_fields) ... ok
+test_response_parser_mock_contract (test_core.ApiContractTests.test_response_parser_mock_contract) ... ok
+test_all_examples (test_core.CoreTests.test_all_examples) ... ok
+test_call_budget (test_core.CoreTests.test_call_budget) ... ok
+test_different_services_not_merged (test_core.CoreTests.test_different_services_not_merged) ... ok
+test_headers_and_labels_not_used (test_core.CoreTests.test_headers_and_labels_not_used) ... ok
+test_history_cap_flag (test_core.CoreTests.test_history_cap_flag) ... ok
+test_history_cap_flag_persists (test_core.CoreTests.test_history_cap_flag_persists) ... ok
+test_history_expiry (test_core.CoreTests.test_history_expiry) ... ok
+test_invalid_settings (test_core.CoreTests.test_invalid_settings) ... ok
+test_ip_fallback (test_core.CoreTests.test_ip_fallback) ... ok
+test_isolated_actors (test_core.CoreTests.test_isolated_actors) ... ok
+test_missing_identity_rejected (test_core.CoreTests.test_missing_identity_rejected) ... ok
+test_modsecurity_fixture (test_core.CoreTests.test_modsecurity_fixture) ... ok
+test_no_future_context (test_core.CoreTests.test_no_future_context) ... ok
+test_no_timer_claim (test_core.CoreTests.test_no_timer_claim) ... ok
+test_not_jev_in_offline_mode (test_core.CoreTests.test_not_jev_in_offline_mode) ... ok
+test_out_of_order_rejected (test_core.CoreTests.test_out_of_order_rejected) ... ok
+test_query_secret_removed (test_core.CoreTests.test_query_secret_removed) ... ok
+test_short_horizon_and_partial (test_core.CoreTests.test_short_horizon_and_partial) ... ok
+test_status_validation (test_core.CoreTests.test_status_validation) ... ok
+test_stride_and_warmup (test_core.CoreTests.test_stride_and_warmup) ... ok
+test_timestamp_nan_rejected (test_core.CoreTests.test_timestamp_nan_rejected) ... ok
+test_timestamp_timezone_required (test_core.CoreTests.test_timestamp_timezone_required) ... ok
+test_unknown_segments_hashed (test_core.CoreTests.test_unknown_segments_hashed) ... ok
+test_window_one (test_core.CoreTests.test_window_one) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.033s
+
+OK
+
+PASS: Browser UI (local assets with Python bridge): 17 windows, selection, scenario switching, N=5, validation.
+PASS: Actual local HTTP GET + token-protected POST returns 17 windows.
+
+No live Jev credentials were available. API checks above are contract tests with synthetic responses, not service tests. Browser UI was tested with local assets bridged to Python; actual HTTP smoke was a separate test. Windows/macOS and real ModSecurity were not tested.
